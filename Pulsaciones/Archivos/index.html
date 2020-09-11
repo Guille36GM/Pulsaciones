@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/gestion.js"></script>
+    <script type="text/javascript" src="../js/codigo.js" ></script>
+</head>
+<body>
+    <nav id="barra" class="navbar navbar-collapse navbar-dark border border-dark">
+        <a id="pulsaciones" class="navbar-brand" href="#">Pulsaciones</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="JavaScript:llamarasincrono('registro.html', 'jb')">Registrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="JavaScript:llamarasincrono('tabla.html', 'jb')">Tabla de Registros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+    <div class="rounded-lg container p-3 my-3 border border-dark">
+        <div class="jumbotron" id="jb">
+            <form action="/action_page.php" class="needs-validation" novalidate>
+                <div class="container">
+                    <h2>Ingrese los datos</h2>
+                </div>
+                <br>
+                <div class="container text-right">
+                    <img src="../imagenes/frecuencia-cardiaca.png" class="float-right" alt="Pulsaciones" style="width:65%">
+                </div>
+                <div class="form-group">
+                    <label for="id">Identificacion:</label>
+                    <input type="number" class="form-control w-25 shadow mb-4" placeholder="Ingrese su identificación" id="id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control w-25 shadow mb-4" placeholder="Ingrese su nombre" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select type="text" class="form-control w-25 shadow mb-4" id="sexo" required>
+                        <option value="" disabled selected>Seleccione...</option>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="form-control w-25 shadow mb-4" placeholder="Ingrese su edad" id="edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="pulsacion">Pulsaciones Por Minuto:</label>
+                    <input type="number" class="form-control w-25 shadow mb-4" id="pulsacion" disabled>
+                </div>
+                <br>
+                <button type="submit" onclick="CalcularPulsaciones()" value="submit" class="btn btn-outline-secondary text-light" id="btnCalcular">Calcular</button>
+                <button type="button" onclick="Guardar()" class="btn btn-outline-secondary text-light" id="BtnGuardar">Guardar</button>
+                <button type="button" onclick="Consultar()" class="btn btn-outline-secondary text-light" id="BtnConsultar">Consultar</button>
+                <button type="button" onclick="Eliminar()" class="btn btn-outline-secondary text-light" id="BtnEliminar">Eliminar</button>
+            </form>
+        </div>
+    </div>
+    <br><br>
+</body>
+</html>

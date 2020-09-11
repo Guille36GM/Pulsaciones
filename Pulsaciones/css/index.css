@@ -1,0 +1,22 @@
+﻿body {
+    background-color: seashell;
+}
+
+#pulsaciones {
+    font-size: 260%;
+}
+
+#barra {
+    background-color: orangered;
+}
+
+#encabezado {
+    background-color: coral;
+}
+
+#btnCalcular, #BtnGuardar, #BtnConsultar, #BtnEliminar, #BtnMostrar {
+    background-color: orangered;
+}
+#jb {
+    background-color: blanchedalmond;
+}
